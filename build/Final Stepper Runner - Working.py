@@ -147,9 +147,9 @@ def moveMotor():
 
     try:
         if (direction):  # If direction is true, set the stepper's direction to 1 or forward
-            board.digital[pin_step_direction].write(int(1))
-        else:  # If direction is false, set the stepper's direction to 0 or backwards
             board.digital[pin_step_direction].write(int(0))
+        else:  # If direction is false, set the stepper's direction to 0 or backwards
+            board.digital[pin_step_direction].write(int(1))
 
         # Make the stepper motor activation pin active for 0.0001 seconds
         board.digital[pin_step_active].write(int(1))
